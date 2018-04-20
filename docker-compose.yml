@@ -1,0 +1,18 @@
+version: "3"
+services:
+  web:
+    image: uconn/local:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/project
+    depends_on:
+      - mongo
+    entrypoint: ["npm", "run", "start"]
+    # entrypoint: ["yarn", "install"]
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db

@@ -1,0 +1,1 @@
+A reference example of linking mongoose schemas together and using a REST api to make an express CRUD app. No front end. Research/understanding only.
